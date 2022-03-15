@@ -12,10 +12,10 @@
     border-radius: 10px 0px 0px 10px;
     display: flex;
     flex-direction: row;
-    box-shadow: #000000ab 0px 0px 10px;
+    box-shadow: #00000000 0px 0px 10px;
     font-family: 'Noto Sans', sans-serif;
 
-    transition: right ease 0.2s 0s;
+    transition: all ease 0.2s 0s;
 }
 
 .ib-console .control-box {

@@ -1,0 +1,30 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+button {
+    padding: 10px;
+    font-weight: 450;
+    font-size: 20px;
+    color: #fff;
+    background-color: #000;
+    border-radius: 15px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 5px 13px;
+    transition: all 0.2s 0s ease;
+}
+button:hover {
+    font-weight: 900;
+    transform: translateY(-3px);
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 7px 16px;
+}
+button.error-maker {
+    background-color: #f00;
+}

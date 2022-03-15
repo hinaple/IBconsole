@@ -1,14 +1,23 @@
-# IBconsole
+# IBconsole(In-Browser Console)
 A console library for web developers with browsers without console.
 * * *
 ### **SETTING**
  * ### EMBEDDING
+    Import JS and CSS files in the HTML header.
     ```html
     <head>
         <link rel="stylesheet" href="ibconsole.css" type="text/css">
         <script src="ibconsole.js"></script>
     </head>
     ```
+    or you can just use Jsdelivr CDN.
+    ```html
+    <head>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/hinaple/IBconsole/ibconsole.js" type="text/css">
+        <script src="https://cdn.jsdelivr.net/gh/hinaple/IBconsole/ibconsole.css"></script>
+    </head>
+    ```
+    
  * ### RUN
     ```js
     //at the top of the main file

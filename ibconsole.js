@@ -7,10 +7,10 @@ class IBConsole {
         }
         
         this.opened = false;
-        this.size = options.size || 300;
+        this.size = options.size ?? 300;
         this.autoScroll = !options.autoScroll;
         
-        let openKey = options.openKey || "F12";
+        let openKey = options.openKey ?? "F12";
         
         this.element = document.createElement("div");
         this.element.className = "ib-console";
@@ -41,6 +41,7 @@ class IBConsole {
                 this.log(evt, "error", lineInfo);
             }
         }
+
     }
     _getErrObj() {
         try {
@@ -61,17 +62,23 @@ class IBConsole {
     open() {
         this.opened = true;
         this.element.style.right = `0px`;
+        this.element.style.boxShadow = "#000000ab 0px 0px 10px";
     }
     close() {
         this.opened = false;
         this.element.style.right = `${-this.size}px`;
+        this.element.style.boxShadow = "#00000000 0px 0px 10px";
     }
     log(msg, type = '', line = this._getLineNum()) {
         let isItOnTop = false;
         if(this.consoleBox.scrollTop + this.consoleBox.offsetHeight + 20 > this.consoleBox.scrollHeight) isItOnTop = true;
         let logEl = document.createElement("div");
         logEl.className = `log ${type}`;
-        logEl.innerText = msg;
+        
+        if(typeof msg === "object") {
+            logEl.innerText = JSON.stringify(msg, null, 4).replace(/[^\S\r\n]/g, "\u00a0");
+        }
+        else logEl.innerText = msg.toString().replace(/[^\S\r\n]/g, "\u00a0");
         let lineEl = document.createElement("div");
         lineEl.className = "line";
         lineEl.innerText = line;

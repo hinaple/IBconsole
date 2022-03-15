@@ -5,16 +5,19 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>IB console example</title>
-    <link rel="stylesheet" href="../ibconsole.css" type="text/css">
     <script src="../ibconsole.js"></script>
+    <link rel="stylesheet" href="../ibconsole.css" type="text/css">
+    <link rel="stylesheet" href="style.css" type="text/css">
 </head>
 
 <body>
-    <button id="logger">LOG SOMETHING</button>
-    <button id="errorer">ERROR SOMETHING</button>
-    <button id="realErr">OCCURRE REAL ERROR</button>
+    <button id="logger">LOG STRING</button>
+    <button id="objLogger">LOG OBJECT</button>
+    <br>
+    <button id="errorer" class="error-maker">ERROR SOMETHING</button>
+    <button id="realErr" class="error-maker">OCCURRE REAL ERROR</button>
 
-    <script src="app.js"></script>
+    <script src="app.js" defer></script>
 </body>
 
 </html>
